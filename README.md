@@ -5,12 +5,8 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+The goal of this lab is to deploy and configure Active Directory (AD) in a virtualized environment using Azure. We will create a Domain Controller (DC), join a client machine to the domain, and configure user accounts and Remote Desktop access for both administrative and non-administrative users.<br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -29,7 +25,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Create a Resource Group
 - Create a Virtual Network and Subnet
 - Create the Domain Controller VM (Windows Server 2022)
-- Setup Client-1 in Azure
 - Create the Client VM (Windows 10)
 - Attach it to the same region and Virtual Network as DC-1
 - After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
