@@ -45,54 +45,58 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 
+
+
 <p>
-<img src="https://i.imgur.com/5wLc5pJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Created and deployed the Vnet for the virtual machines in azure, inside the "Active-Directory-Lab" resource group (a virtual network lets computers and devices talk to each other without needing physical cables, making IT networks more flexible, scalable, and efficient!).  
 </p>
+<br />
 
-Created and deployed the Vnet for the virtual machines in azure, inside the "Active-Directory-Lab" resource group (a virtual network lets computers and devices talk to each other without needing physical cables, making IT networks more flexible, scalable, and efficient!).
+<p>
+<img src="https://i.imgur.com/pERPKJA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Created and deployed the windows server virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.   
+</p>
+<br />
 
-
-Disk Sanitization Steps
-
-Created and deployed the windows server virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.
-
-
-Disk Sanitization Steps
-
+<p>
+<img src="https://i.imgur.com/6a25u7I.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 Created and deployed the windows 10 virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/fCHSqz2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources.   
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/MMBzW6e.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Running ipconfig /all in PowerShell helps verify Client-1’s network configuration, ensuring that:
+It has the correct IP address, subnet mask, and default gateway.
+It is using DC-1’s Private IP as its DNS server (critical for domain functionality).
+It is connected to the correct domain and can communicate with network resources.
+If there are issues, this command is the first troubleshooting step in diagnosing network or Active Directory problems.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/GNdDd6K.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/17Vp9Eb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0oAN80D.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HlVXaPK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
 
 
-Disk Sanitization Steps
-
-Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources.
 
 
-Disk Sanitization Steps
-
-Running ipconfig /all in PowerShell helps verify Client-1’s network configuration, ensuring that: It has the correct IP address, subnet mask, and default gateway. It is using DC-1’s Private IP as its DNS server (critical for domain functionality). It is connected to the correct domain and can communicate with network resources. If there are issues, this command is the first troubleshooting step in diagnosing network or Active Directory problems.
-
-
-Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps
-
-Installing Active Directory Domain Services (AD DS) is essential for managing a Windows-based IT infrastructure. It centralizes user authentication, security, and resource management, making IT operations more secure, efficient, and scalable.
-
-
-Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps
-
-
-
-Creating a Domain Admin user is a best practice in Active Directory management. It ensures secure administration, prevents unauthorized changes, and allows IT teams to efficiently manage the domain.
-Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps
-
-Joining Client-1 to mydomain.com ensures centralized management, security, and access control in an enterprise IT environment. It simplifies user authentication, IT administration, and resource access, making it a best practice for businesses.
-
-
-Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps
-
-Setting up Remote Desktop for non-admin users on Client-1 allows IT staff and employees to securely access workstations remotely without giving unnecessary admin rights. This improves security, efficiency, and IT management while preventing unauthorized system modifications.
-
-
-Disk Sanitization Steps Disk Sanitization Steps Disk Sanitization Steps
-
-Creating additional users and testing login ensures that domain authentication is working properly. This step is crucial for verifying Active Directory setup, user permissions, and network policies, which are essential for managing an IT environment effectively.
 
