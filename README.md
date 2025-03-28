@@ -61,12 +61,12 @@ When working with in the Azure cloud one of the first steps you should always do
 
 <p>This section outlines the steps to create and configure a Windows 10 virtual machine named "Client-1" in Azure, connecting it to the same network as the Domain Controller (DC-1).</p>
 
-<ol>
+<ul>
   <li>
     <h3>Create the Client VM (Client-1)</h3>
     <p>Deploy a Windows 10 virtual machine named "Client-1"</p>
     <ul>
-      <li><strong>Username:</strong> labuser</li>
+      <li><strong>Username:</strong> fresh</li>
       <li><strong>Password:</strong> Cyberlab123!</li>
       <li><strong>Region:</strong> Same region as DC-1</li>
       <li><strong>Virtual Network:</strong> Same Virtual Network as DC-1</li>
@@ -74,34 +74,34 @@ When working with in the Azure cloud one of the first steps you should always do
   </li>
   <li>
     <h3>Configure DNS Settings</h3>
-    <p>After the virtual machine is created, configure Client-1's DNS settings to point to the private IP address of DC-1.</p>
-  </li>
-  <li>
-    <h3>Restart Client-1</h3>
+    <p>After the virtual machine is created, configure Client-1's DNS settings to point to the private IP address of DC-1.(critical for domain functionality). Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources. 
+  
+<h3>Restart Client-1</h3>
     <p>From the Azure Portal, restart the Client-1 virtual machine to apply the DNS settings.</p>
   </li>
   <li>
     <h3>Login and Verify Connectivity</h3>
-    <p>Login to the Client-1 virtual machine using the provided credentials (labuser/Cyberlab123!).</p>
-  </li>
-  <li>
-    <h3>Ping DC-1</h3>
+    <p>Login to the Client-1 virtual machine using the provided credentials (fresh/Cyberlab123!).</p>
     <p>Open a command prompt or PowerShell window and attempt to ping the private IP address of DC-1.</p>
     <p><strong>Verification:</strong> Ensure the ping operation succeeds, indicating network connectivity.</p>
   </li>
   <li>
     <h3>Verify DNS Configuration</h3>
     <p>From Client-1, open PowerShell and execute the command <code>ipconfig /all</code>.</p>
-    <p><strong>Verification:</strong> Review the output and confirm that the DNS settings display the private IP address of DC-1.</p>
+    <p><strong>Verification:</strong> Review the output and confirm that the DNS settings display the private IP address of DC-1. Running ipconfig /all in PowerShell helps verify Client-1’s network configuration, ensuring that:
+It has the correct IP address, subnet mask, and default gateway.
+It is using DC-1’s Private IP as its DNS server .
+It is connected to the correct domain and can communicate with network resources.
+If there are issues, this command is the first troubleshooting step in diagnosing network or Active Directory problems.</p>
   </li>
-</ol>
+</ul>
 <br />
 
 <p>
 <img src="https://i.imgur.com/fCHSqz2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources.   
+  
 </p>
 <br />
 
@@ -109,11 +109,7 @@ Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authenti
 <img src="https://i.imgur.com/MMBzW6e.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Running ipconfig /all in PowerShell helps verify Client-1’s network configuration, ensuring that:
-It has the correct IP address, subnet mask, and default gateway.
-It is using DC-1’s Private IP as its DNS server (critical for domain functionality).
-It is connected to the correct domain and can communicate with network resources.
-If there are issues, this command is the first troubleshooting step in diagnosing network or Active Directory problems.
+
 </p>
 <br />
 
