@@ -5,53 +5,52 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-The goal of this lab is to deploy and configure Active Directory (AD) in a virtualized environment using Azure. We will create a Domain Controller (DC), join a client machine to the domain, and configure user accounts and Remote Desktop access for both administrative and non-administrative users.<br />
+In this project I will be  preparing multiple environments using Microsoft Azure, to create a domain controller server and demonstrate how you can use the cloud to provision and use Active Directory and administrative tools. This will require deployments of Windows OS Virtual Environment(Client), a Windows Server 22 Datacenter (Domain Controller). Creating a  connection between the Windows Server VM (Domain Controller DC-1) and the Windows OS VM (Client-1). This connection will be established by setting the DCs (Domain Controllers) Private IP address to static and pointing the Windows OS Client-1 DNS Server to this Static Private IP of the DC.<br />
 
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines/Compute, DNS, Networking)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Microsoft Azure Windows 10 Pro version 22H2 - x64 Gen2 Virtual Machine
+- Microsoft Azure Windows Server 22 Datacenter: Azure Edition - x64 Gen2 Virtual Machine
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>List of Prerequisites</h2>
 
-- Create a Resource Group
-- Create a Virtual Network and Subnet
-- Create the Domain Controller VM (Windows Server 2022)
-- Create the Client VM (Windows 10)
-- Attach it to the same region and Virtual Network as DC-1
-- After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
-- From Client-1, open PowerShell and run ipconfig /all
-- Install Active Directory
-- Create a Domain Admin user within the domain
-- Join Client-1 to your domain (mydomain.com)
-- Setup Remote Desktop for non-administrative users on Client-1
-- Create a bunch of additional users and attempt to log into client-1 with one of the users
-
-
-
+Microsoft Azure
+Laptop or Desktop (works best)
 
 <h2>Deployment and Configuration Steps</h2>
-
-
+<p>
+When working with in the Azure cloud one of the first steps you should always do is establish a resource. This allows you to see all your resource created in one place. Microsoft also mentions this a one of the best practices for managing resources. I created a resource group and  named  "ADpracticeLab"  
+</p>
 
 <p>
-Created and deployed the Vnet for the virtual machines in azure, inside the "Active-Directory-Lab" resource group (a virtual network lets computers and devices talk to each other without needing physical cables, making IT networks more flexible, scalable, and efficient!).  
+ Inside the created resource group you should deployed a Virtual network with subnets for the virtual machines. (a virtual network lets computers and devices talk to each other without needing physical cables, making IT networks more flexible, scalable, and efficient!).  
 </p>
 <br />
 
 <p>
 <img src="https://i.imgur.com/pERPKJA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<h3>Domain Controller Virtual Machine Deployment</h3>
+    <ul>
+      <li>
+        <strong>Virtual Machine:</strong> Deploy a Windows Server 2022 virtual machine instance.
+      </li>
+      <li>
+        <strong>Domain Controller Role:</strong> Install and configure the Active Directory Domain Services role on the deployed virtual machine, promoting it to a Domain Controller.
+      </li>
+    </ul>
+  </li>
+</ol>
 <p>
-Created and deployed the windows server virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.   
+Once the Virtual network is created, deploy a Virtual machine. Be sure to choose the resource group you the windows server virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.   
 </p>
 <br />
 
