@@ -41,25 +41,60 @@ When working with in the Azure cloud one of the first steps you should always do
 <h3>Domain Controller Virtual Machine Deployment</h3>
     <ul>
       <li>
-        <strong>Virtual Machine:</strong> Deploy a Windows Server 2022 virtual machine instance.
+        <strong>Virtual Machine:</strong> Once the Virtual network is created, Deploy a Windows Server 2022 virtual machine instance. This server will be the domain controller(dc-1) Must be created in the same resource group as the network.  The region and zone must be the same as the network created.
+          <p>Enter a username and password to login into the domain controller. I used Username: labuser Password: Cyberlab123(for the purpose of this lab)</p>
       </li>
       <li>
-        <strong>Domain Controller Role:</strong> Install and configure the Active Directory Domain Services role on the deployed virtual machine, promoting it to a Domain Controller.
+        <strong>Domain Controller Role:</strong> Within the Azure console set Domain Controller's NIC Private IP address to be static. Then install and configure the Active Directory Domain Services role on the deployed virtual machine, promoting it to a Domain Controller. Be sure to disable the Windows firewall for testing connectivity.
       </li>
     </ul>
   </li>
 </ol>
-<p>
-Once the Virtual network is created, deploy a Virtual machine. Be sure to choose the resource group you the windows server virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.   
+<p>  
 </p>
 <br />
 
 <p>
 <img src="https://i.imgur.com/6a25u7I.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Created and deployed the windows 10 virtual machine in azure, inside the "Active-Directory-Lab" resource group for unified deployment, organization as well as easier management.
-</p>
+<h2>Setting Up Client-1 Virtual Machine in Azure</h2>
+
+<p>This section outlines the steps to create and configure a Windows 10 virtual machine named "Client-1" in Azure, connecting it to the same network as the Domain Controller (DC-1).</p>
+
+<ol>
+  <li>
+    <h3>Create the Client VM (Client-1)</h3>
+    <p>Deploy a Windows 10 virtual machine named "Client-1"</p>
+    <ul>
+      <li><strong>Username:</strong> labuser</li>
+      <li><strong>Password:</strong> Cyberlab123!</li>
+      <li><strong>Region:</strong> Same region as DC-1</li>
+      <li><strong>Virtual Network:</strong> Same Virtual Network as DC-1</li>
+    </ul>
+  </li>
+  <li>
+    <h3>Configure DNS Settings</h3>
+    <p>After the virtual machine is created, configure Client-1's DNS settings to point to the private IP address of DC-1.</p>
+  </li>
+  <li>
+    <h3>Restart Client-1</h3>
+    <p>From the Azure Portal, restart the Client-1 virtual machine to apply the DNS settings.</p>
+  </li>
+  <li>
+    <h3>Login and Verify Connectivity</h3>
+    <p>Login to the Client-1 virtual machine using the provided credentials (labuser/Cyberlab123!).</p>
+  </li>
+  <li>
+    <h3>Ping DC-1</h3>
+    <p>Open a command prompt or PowerShell window and attempt to ping the private IP address of DC-1.</p>
+    <p><strong>Verification:</strong> Ensure the ping operation succeeds, indicating network connectivity.</p>
+  </li>
+  <li>
+    <h3>Verify DNS Configuration</h3>
+    <p>From Client-1, open PowerShell and execute the command <code>ipconfig /all</code>.</p>
+    <p><strong>Verification:</strong> Review the output and confirm that the DNS settings display the private IP address of DC-1.</p>
+  </li>
+</ol>
 <br />
 
 <p>
