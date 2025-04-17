@@ -113,7 +113,7 @@ If there are issues, this command is the first troubleshooting step in diagnosin
 <br />
 
 <p>
-<img src="https://imgur.com/nI5MDPc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/DokF8Rz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
