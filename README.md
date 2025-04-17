@@ -73,20 +73,19 @@ When working with in the Azure cloud one of the first steps you should always do
     </ul>
   </li>
     <p>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="XJG87P1"><a href="https://imgur.com/XJG87P1">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-    <img src="https://imgur.com/XJG87P1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://imgur.com/XJG87P1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p>
   <li>
     <h3>Configure DNS Settings</h3>
     <p>After the virtual machine is created, configure Client-1's DNS settings to point to the private IP address of DC-1.(critical for domain functionality). Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources. 
   <p>
-    <img src="https://imgur.com/vn23VhG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://imgur.com/vn23VhG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
   <p>
-    <img src="https://imgur.com/ek5K6jV" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://imgur.com/ek5K6jV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   </p>
     <p>
-    <img src="https://imgur.com/37BtlSn" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://imgur.com/37BtlSn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p>
 
 <h3>Restart Client-1</h3>
@@ -99,7 +98,7 @@ When working with in the Azure cloud one of the first steps you should always do
     <p><strong>Verification:</strong> Ensure the ping operation succeeds, indicating network connectivity.</p>
   </li>
   <p>
-    <img src="https://imgur.com/IQRq0T5" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <img src="https://imgur.com/IQRq0T5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p>
   <li>
     <h3>Verify DNS Configuration</h3>
@@ -114,7 +113,7 @@ If there are issues, this command is the first troubleshooting step in diagnosin
 <br />
 
 <p>
-<img src="https://imgur.com/nI5MDPc" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/nI5MDPc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
