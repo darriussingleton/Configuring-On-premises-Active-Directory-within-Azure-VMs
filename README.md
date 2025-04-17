@@ -73,6 +73,7 @@ When working with in the Azure cloud one of the first steps you should always do
     </ul>
   </li>
     <p>
+        <blockquote class="imgur-embed-pub" lang="en" data-id="XJG87P1"><a href="https://imgur.com/XJG87P1">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
     <img src="https://imgur.com/XJG87P1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
     </p>
   <li>
