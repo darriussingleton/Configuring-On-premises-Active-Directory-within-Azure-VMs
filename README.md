@@ -72,10 +72,22 @@ When working with in the Azure cloud one of the first steps you should always do
       <li><strong>Virtual Network:</strong> Same Virtual Network as DC-1</li>
     </ul>
   </li>
+    <p>
+    <img src="https://imgur.com/XJG87P1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p>
   <li>
     <h3>Configure DNS Settings</h3>
     <p>After the virtual machine is created, configure Client-1's DNS settings to point to the private IP address of DC-1.(critical for domain functionality). Setting Client-1’s DNS to DC-1’s Private IP is essential for domain authentication, Active Directory functionality, group policy updates, and proper internal resource resolution. Without this setting, Client-1 may fail to join the domain, authenticate users, or access shared network resources. 
-  
+  <p>
+    <img src="https://imgur.com/vn23VhG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  </p>
+  <p>
+    <img src="https://imgur.com/ek5K6jV" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  </p>
+    <p>
+    <img src="https://imgur.com/37BtlSn" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p>
+
 <h3>Restart Client-1</h3>
     <p>From the Azure Portal, restart the Client-1 virtual machine to apply the DNS settings.</p>
   </li>
@@ -85,6 +97,9 @@ When working with in the Azure cloud one of the first steps you should always do
     <p>Open a command prompt or PowerShell window and attempt to ping the private IP address of DC-1.</p>
     <p><strong>Verification:</strong> Ensure the ping operation succeeds, indicating network connectivity.</p>
   </li>
+  <p>
+    <img src="https://imgur.com/IQRq0T5" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    </p>
   <li>
     <h3>Verify DNS Configuration</h3>
     <p>From Client-1, open PowerShell and execute the command <code>ipconfig /all</code>.</p>
@@ -98,30 +113,7 @@ If there are issues, this command is the first troubleshooting step in diagnosin
 <br />
 
 <p>
-<img src="https://i.imgur.com/fCHSqz2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/nI5MDPc" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/MMBzW6e.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/GNdDd6K.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/17Vp9Eb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/0oAN80D.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/HlVXaPK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-
-
-
-
-
